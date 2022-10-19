@@ -15,9 +15,10 @@ CAR_CONTROL_TOKEN = ""
 CAR_CONTROL_CHAT_ID = ""
 ```
 
-Aşağıdaki parametreler aradığınız aracın url üzerindeki key'idir.
+Aşağıdaki parametreler aradığınız aracın url üzerindeki key'idir. ve istediğiniz araç için key oluşturup main.py içindeki fonksiyona verilebilir.
 ```
 DOGUS_OTO_GOLF_KEY = ""
+DOGUS_OTO_OCTAVIA_KEY= ""
 ```
 
 ### Örnek Bildirim
