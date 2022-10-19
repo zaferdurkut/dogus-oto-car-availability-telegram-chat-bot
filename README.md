@@ -1,4 +1,4 @@
-# Ara
+# Doğus Araç Arama Telegram Botu
 Bu Doğuş Oto'daki 0 araçların mevcut durumunu kontrol etmek amacıyla telegrama bildirim gönderen bir proje yapılmıştır.
 
 ##  Kurulum
