@@ -21,6 +21,11 @@ DOGUS_OTO_GOLF_KEY = ""
 DOGUS_OTO_OCTAVIA_KEY= ""
 ```
 
+Çalıştırma
+```
+python main.py
+```
+
 ### Örnek Bildirim
 
 ![memory](example.png "Memory")
