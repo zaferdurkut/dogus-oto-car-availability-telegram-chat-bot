@@ -4,6 +4,7 @@ from time import sleep
 from typing import List
 
 import requests
+import urllib3
 from urllib3.exceptions import InsecureRequestWarning
 
 from config import (
@@ -17,7 +18,7 @@ from config import (
 from logging_config import setup_logger
 
 
-requests.urllib3.disable_warnings(InsecureRequestWarning)
+urllib3.disable_warnings(InsecureRequestWarning)
 
 logger = setup_logger(__name__, level=logging.INFO)
 
