@@ -4,6 +4,7 @@ from time import sleep
 from typing import List
 
 import requests
+from urllib3.exceptions import InsecureRequestWarning
 
 from config import (
     SEND_MESSAGE_API_URL,
@@ -14,6 +15,9 @@ from config import (
     DOGUS_OTO_CAR_KEYS,
 )
 from logging_config import setup_logger
+
+
+requests.urllib3.disable_warnings(InsecureRequestWarning)
 
 logger = setup_logger(__name__, level=logging.INFO)
 
@@ -63,11 +67,13 @@ def send_to_telegram(message, chat_id):
 
 
 def get_cars_from_dogus_oto_api(model_key: str) -> List[dict]:
+    request_url = DOGUS_OTO_GET_CARS_API_URL.format(CAR_MODEL_KEY=model_key)
     response = requests.post(
-        DOGUS_OTO_GET_CARS_API_URL.format(CAR_MODEL_KEY=model_key),
+        request_url,
         json={},
         verify=False,
     )
+    logger.info(request_url + " | Status Code:  " + str(response.status_code))
     if response.status_code == 200:
         result = []
         for item in response.json()["data"]:
