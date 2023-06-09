@@ -1,5 +1,4 @@
 CAR_CONTROL_TOKEN = ""
-CAR_CONTROL_CHAT_ID = ""
 CAR_CONTROL_GROUP_CHAT_ID = ""
 SEND_MESSAGE_API_URL = "https://api.telegram.org/bot{API_TOKEN}/sendMessage"
 

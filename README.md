@@ -12,7 +12,6 @@ cp temp_config.py config.py
 Aşağıdaki parametreler telegram için doldurulmalı 
 ```
 CAR_CONTROL_TOKEN = ""
-CAR_CONTROL_CHAT_ID = ""
 ```
 
 Aşağıdaki parametreler aradığınız aracın url üzerindeki key'idir. ve istediğiniz araç için key oluşturup main.py içindeki fonksiyona verilebilir.
