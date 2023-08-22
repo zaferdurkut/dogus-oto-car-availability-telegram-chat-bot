@@ -115,4 +115,4 @@ if __name__ == "__main__":
             search_car_availability(model_key=model_key, is_not_found_message=False)
             sleep(5)
         logger.info("Finished searching cars")
-        sleep(60*30)
+        sleep(60*60)
