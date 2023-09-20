@@ -40,17 +40,23 @@ def populate_message(model_key: str, items: List[dict], is_not_found_message: bo
             for location in item["locations"]
         ]
         result_str = (
-            result_str
-            + f"*Model*: {item['model']}\n"
-              f"*Fiyat*: {item['price']}\n"
-              f"*URL*:   {item['url']}\n"
-              f"*Konum*: {', '.join(locations)}\n"
-              f"----------------------------------------\n"
+            result_str + f"*Model*: {item['model']}\n"
+            f"*Fiyat*: {item['price']}\n"
+            f"*URL*:   {item['url']}\n"
+            f"*Konum*: {', '.join(locations)}\n"
+            f"----------\n"
         )
 
     search_time = "Arama Zamanı: " + datetime.now().strftime("%Y/%m/%d-%H:%M")
     if len(result_str) > 0:
-        return "*Sıfır Araba Arama Sonucu* \t " + search_time + "\n\n" + result_str
+        return (
+            "\n\n"
+            f"*#----------------------------------------#*\n"
+            + "*Sıfır Araba Arama Sonucu* \t "
+            + search_time
+            + "\n\n"
+            + result_str
+        )
     else:
         if is_not_found_message:
             return f"{model_key.upper()} - *Araç Bulunamadı* \t " + search_time
@@ -120,4 +126,4 @@ if __name__ == "__main__":
             search_car_availability(model_key=model_key, is_not_found_message=False)
             sleep(5)
         logger.info("Finished searching cars")
-        sleep(60*60)
+        sleep(60 * 60)
