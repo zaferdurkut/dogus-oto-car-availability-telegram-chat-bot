@@ -52,7 +52,7 @@ def populate_message(model_key: str, items: List[dict], is_not_found_message: bo
         return (
             "\n\n"
             f"*#----------------------------------------#*\n"
-            + "*Sıfır Araba Arama Sonucu* \t "
+            + f"*Sıfır Araba Arama Sonucu ({model_key})* \t "
             + search_time
             + "\n\n"
             + result_str
