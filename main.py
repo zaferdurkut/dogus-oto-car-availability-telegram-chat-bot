@@ -41,9 +41,14 @@ def populate_message(model_key: str, items: List[dict], is_not_found_message: bo
         ]
         result_str = (
             result_str
-            + f"{item['model']}, *{item['price']}* fiyat ile, \n\t {locations}, \n\t url: {item['url']}\n"
+            + f"*Model*: {item['model']}\n"
+              f"*Fiyat*: {item['price']}\n"
+              f"*URL*:   {item['url']}\n"
+              f"*Konum*: {', '.join(locations)}\n"
+              f"----------------------------------------\n"
         )
-    search_time = " Arama Zamanı: " + datetime.now().strftime("%Y/%m/%d-%H:%M")
+
+    search_time = "Arama Zamanı: " + datetime.now().strftime("%Y/%m/%d-%H:%M")
     if len(result_str) > 0:
         return "*Sıfır Araba Arama Sonucu* \t " + search_time + "\n\n" + result_str
     else:
